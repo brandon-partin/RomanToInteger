@@ -73,7 +73,6 @@ class Solution:
         if s.__contains__("CM"):
             res += 900
             s = s.replace("CM", "")
-            print(s)
 
         for letter in s:
             if letter == "I":
