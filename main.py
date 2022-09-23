@@ -55,6 +55,26 @@ Constraints:
 class Solution:
     def romanToInt(self, s: str) -> int:
         res = 0
+        if s.__contains__("IV"):
+            res += 4
+            s = s.replace("IV", "")
+        if s.__contains__("IX"):
+            res += 9
+            s = s.replace("IX", "")
+        if s.__contains__("XL"):
+            res += 40
+            s = s.replace("XL", "")
+        if s.__contains__("XC"):
+            res += 90
+            s = s.replace("XC", "")
+        if s.__contains__("CD"):
+            res += 400
+            s = s.replace("CD", "")
+        if s.__contains__("CM"):
+            res += 900
+            s = s.replace("CM", "")
+            print(s)
+
         for letter in s:
             if letter == "I":
                 res += 1
